@@ -8,7 +8,4 @@ class Helpers
     #returns true if the user_id is in the session hash and false if not.The Ruby !! operator will come in handy here.
   end
 
-  def not_found
-    raise ActionController::RoutingError.new('Not Found')
-  end
 end

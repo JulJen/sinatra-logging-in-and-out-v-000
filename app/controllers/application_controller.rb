@@ -23,8 +23,8 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/account' do
-    if session[:user_id]
-      @session = session
+    @user = Helpers.current_user(session)
+    if @user
       erb :account
     else
       erb:error
@@ -34,6 +34,6 @@ class ApplicationController < Sinatra::Base
   get '/logout' do
     session.clear
     redirect '/'
-  end 
+  end
 
 end

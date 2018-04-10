@@ -9,5 +9,4 @@ class Helpers
     !!session[:user_id]
     #returns true if the user_id is in the session hash and false if not
   end
-
 end
